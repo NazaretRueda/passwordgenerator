@@ -90,6 +90,7 @@ var upperCasedCharacters = [
 
 
 var testPassword = "";
+var isValid = false;
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -134,9 +135,9 @@ function getPasswordOptions() {
 
   // To validate all the criteria above
   if (isEnough && isLower && isUpper && isNumeric && isSpecial) {
-    console.log(testPassword);
+    isValid = true;
   } else {
-    console.log("Try again");
+    isValid = false;
   }
 }
 
@@ -156,20 +157,27 @@ function getRandom(arr) {
   let numberRandom = Math.floor((Math.random() * numericCharacters.length));
   testPassword = testPassword + numericCharacters[numberRandom];
 
-  //Pick a random number and save it to testPassword
+  //Pick a random Special Character and save it to testPassword
   let specialRandom = Math.floor((Math.random() * specialCharacters.length));
   testPassword = testPassword + specialCharacters[specialRandom];
-
-  console.log(testPassword);
 }
 
 
 // Function to generate password with user input
+
 function generatePassword() {
 
-  //getPasswordOptions ();
-  getRandom ();
+  testPassword = ""; 
+  isValid = false;
+  
+  do {
+    getRandom ();
+    getPasswordOptions ();
+  } while (isValid == false);
+  return testPassword;
+
 }
+
 
 
 // Get references to the #generate element
