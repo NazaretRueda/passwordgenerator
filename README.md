@@ -22,7 +22,7 @@ We have used HTML and JavaScript to construct a dynamic user interface in this e
 
 ![Screenshot](images/PasswordGenerator.png)
 
-> To access the url of this application click 
+> To access the url of this application click https://nazaretrueda.github.io/passwordgenerator/
 
 ## Credits
 
