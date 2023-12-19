@@ -88,10 +88,60 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var testPassword = "";
+    testPassword = "012%P5678u"
+    //testPassword = "Myname88"
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+  // This condition will valid the leght of password (At least 8 characters but no more than 128)
+  var isEnough = false;
+  if (testPassword.length > 8 && testPassword.length < 128) { 
+    isEnough = true;
+  }
+
+  // This Boolean condition will valid if password contain Lowercase
+  var isLower = false;
+  lowerCasedCharacters.forEach(element => {
+    if (testPassword.includes(element)) {
+        isLower = true;
+    }
+  });
+  
+  // This Boolean condition will valid if password contain any Uppercase
+  var isUpper = false;
+  upperCasedCharacters.forEach(element => {
+    if (testPassword.includes(element)) {
+        isUpper = true;
+    }
+  });
+
+  // This Boolean condition will valid if password contain a numeric digit
+  var isNumeric = false;
+  numericCharacters.forEach(element => {
+    if (testPassword.includes(element)) {
+      isNumeric = true;
+    }
+  });
+ 
+  // This Boolean condition will valid if password contain a Special characters
+  var isSpecial = false;
+  specialCharacters.forEach(element => {
+    if (testPassword.includes(element)) {
+      isSpecial = true;
+    }
+  });
+
+  // To validate all the criteria above
+  if (isEnough && isLower && isUpper && isNumeric && isSpecial) {
+    console.log(testPassword);
+  } else {
+    console.log("Try again");
+  }
+  
 }
+
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -101,7 +151,9 @@ function getRandom(arr) {
 // Function to generate password with user input
 function generatePassword() {
 
+  getPasswordOptions ();
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
