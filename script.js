@@ -141,7 +141,6 @@ function getPasswordOptions() {
   }
 }
 
-
 // Function for getting a random element from an array
 function getRandom(arr) {
 
@@ -162,7 +161,6 @@ function getRandom(arr) {
   testPassword = testPassword + specialCharacters[specialRandom];
 }
 
-
 // Function to generate password with user input
 
 function generatePassword() {
@@ -177,8 +175,6 @@ function generatePassword() {
   return testPassword;
 
 }
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
