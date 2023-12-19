@@ -88,9 +88,8 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
 var testPassword = "";
-    testPassword = "012%P5678u"
-    //testPassword = "Myname88"
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -139,19 +138,37 @@ function getPasswordOptions() {
   } else {
     console.log("Try again");
   }
-  
 }
 
 
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+  // Pick a random Upper Character and save it to testPassword
+  let upperRandom = Math.floor((Math.random() * upperCasedCharacters.length));
+  testPassword = testPassword + upperCasedCharacters[upperRandom];
+
+  // Pick a random lower Character and save it to testPassword
+  let lowerRandom = Math.floor((Math.random() * lowerCasedCharacters.length));
+  testPassword = testPassword + lowerCasedCharacters[lowerRandom];
+
+  // Pick a random number and save it to testPassword
+  let numberRandom = Math.floor((Math.random() * numericCharacters.length));
+  testPassword = testPassword + numericCharacters[numberRandom];
+
+  //Pick a random number and save it to testPassword
+  let specialRandom = Math.floor((Math.random() * specialCharacters.length));
+  testPassword = testPassword + specialCharacters[specialRandom];
+
+  console.log(testPassword);
 }
+
 
 // Function to generate password with user input
 function generatePassword() {
 
-  getPasswordOptions ();
+  //getPasswordOptions ();
+  getRandom ();
 }
 
 
