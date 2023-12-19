@@ -4,11 +4,19 @@
 
 ## Description
 
-The purpose of this activity is create a web application that will create random passwords based on certain criterias. 
+As part of this activity, we will create a web application that generates random passwords according to the following criteria.
 
-This project is aimed to apply the learned knowledge on JavaScript, using different arrays and executing functions that allow us to create and validate certain conditions.
+- The length of the password:
+    At least 8 characters but no more than 128.
 
-This example also combinate the use of HTML with JavaScript for a dynamic user experience.
+- Character types:
+    Lowercase
+    Uppercase
+    Numeric
+    Special characters ($@%&*, etc)
+
+The purpose of this project is to demonstrate the application of the learned knowledge of JavaScript by using different arrays and executing functions that allow us to create and validate a number of conditions.
+We have used HTML and JavaScript to construct a dynamic user interface in this example.
 
 ## Usage
 
