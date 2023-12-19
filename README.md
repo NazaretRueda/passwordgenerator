@@ -20,7 +20,7 @@ We have used HTML and JavaScript to construct a dynamic user interface in this e
 
 ## Usage
 
-![Alt text](<images/Password generator.png>)
+
 
 > To access the url of this application click 
 
